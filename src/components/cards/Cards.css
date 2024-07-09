@@ -1,0 +1,247 @@
+.CardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "card1 card2"
+        "card1 card3";
+    gap: 0;
+    width: 90%;
+    height: fit-content;
+    margin: 1% auto;
+    box-sizing: border-box;
+    padding: 0 5%;
+    font-size: 30px;
+    
+}
+
+#card1 {
+    grid-area: card1;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.boxTitleLink {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .5em;
+    margin-top: 0;
+    margin-bottom: 10%;
+}
+
+.TituloLink {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0;
+}
+
+#card1>img {
+    width: 100%;
+    height: 20rem;
+}
+
+#card1 .cardLink {
+    width: fit-content;
+    color: black;
+    font-size: .6em;
+    width: 80%;
+   
+}
+
+#card1 .cardTitulo {
+
+    /* width: 80%; */
+    color: black;
+    font-size: 1.388em;
+    text-align: left;
+
+}
+
+#card2 {
+    grid-area: card2;
+    border-radius: 3px;
+    height: fit-content;
+    align-self: flex-end;
+    margin-bottom: 2% !important;
+    margin: 3% auto;
+    width: 80%;
+}
+
+#card2 img,
+#card3 img {
+    width: 9.6rem;
+}
+
+#card2 .cardTitulo {
+    text-align: left;
+    font-size: 1.188em;
+}
+
+#card3 {
+    grid-area: card3;
+    align-self: flex-start;
+    border-radius: 3px;
+    height: fit-content;
+    margin: auto;
+    width: 80%;
+    
+}
+
+#card3 .cardTitulo {
+    text-align: left;
+    font-size: 1.188em;
+}
+
+.CardBox {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    background: #fdf7f75e;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.20);
+    padding: 0 2%;
+}
+
+.CardBody {
+    /* background: hsl(210, 7%, 78%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+.cardTitulo {
+    text-align: left;
+
+}
+
+.cardLink {
+    text-align: left;
+    font-size: .5em;
+    color: black;
+
+}
+
+.CardBox img {
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 2% !important;
+    object-fit: fill;
+}
+
+.tituloIphone {
+    margin-top: 5% !important;
+    margin-bottom: 1% !important;
+    font-size: 3rem !important;
+    font-weight: bold;
+
+}
+
+/* Estilos para dispositivos com largura de tela de até 600 pixels */
+@media screen and (max-width: 769px) {
+    .CardContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr .5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3";
+        height: fit-content;
+        margin: 5% auto;
+        /* background: red; */
+        width: 90% !important;
+    }
+
+    .CardBox {
+        width: 80%;
+    }
+
+    #card1 .cardTitulo {
+        width: 90%;
+        margin: 2% 0 2% 2%;
+        font-size: 2.5rem;
+    }
+
+    #card1 .cardLink {
+
+        width: fit-content;
+    }
+
+    /* #card2{
+
+    }
+    #card3{
+        
+    } */
+    .tituloIphone {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Estilos para dispositivos com largura de tela de mais de 1187 pixels */
+@media screen and (max-width: 430px) {
+    .CardBox {
+        width: 100%;
+        padding: 2%;
+    }
+
+    #card1 {
+        width: 110%;
+        margin: auto 0;
+    }
+
+    #card1 img {
+        object-fit: cover;
+        /* object-fit: contain; */
+    }
+
+    #card1 .cardTitulo {
+        font-size: 1em;
+    }
+
+    #card2 {
+        width: 110%;
+        margin: auto 0;
+    }
+    #card2 .cardTitulo{
+        font-size: .9em;
+        font-weight: bold;
+    }
+
+    #card3 {
+        width: 110%;
+        margin: auto 0;
+        
+    }
+    #card3 .cardTitulo{
+        font-size: .9em;
+        font-weight: bold;
+    }
+    .cardLink{
+        font-size: .5em;
+        margin-top: 2%;
+    }
+    .tituloIphone {
+        font-size: 2rem !important;
+        margin-top: 10% !important;
+        text-align: center;
+        background-color: rgb(202, 202, 202, .2);
+        border-radius: 10px;
+        padding: 2%;
+        box-shadow: 0px 0px 5px 1px rgb(0, 0, 0,.6);
+    }
+}
