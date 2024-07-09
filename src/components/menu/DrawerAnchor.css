@@ -1,0 +1,25 @@
+
+.boxPrincipal{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+.btnMenu{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.Taglinks{
+    color: black;
+    margin: 2% ;
+    font-size: 1.2rem;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .btnMenu{
+        display: initial;
+    }   
+}
